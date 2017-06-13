@@ -24,6 +24,6 @@ else
   echo "No record was written"
   exit
 fi
-logline="$(date +"%Y-%m-%d %H %M %S") $domain $status"
+logline="$(date +"%Y-%m-%d %H:%M:%S") $domain $status"
 echo $logline >> $logfile
 echo $logline" >> "$logfile
