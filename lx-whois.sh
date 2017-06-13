@@ -21,7 +21,9 @@ elif [ "$action" = "n" ]
   then
   status="TAKEN"
 else
+  echo "No record was written"
   exit
 fi
-echo $(date +"%Y-%m-%d %H %M %S") $domain $status >> $logfile
-echo "Record written in "$logfile
+logline="$(date +"%Y-%m-%d %H %M %S") $domain $status"
+echo $logline >> $logfile
+echo $logline" >> "$logfile
