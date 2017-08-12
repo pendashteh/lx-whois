@@ -10,7 +10,7 @@ if [ "$domain" = "" ]
   exit
 fi
 
-whois $domain
+whois ${*}
 read -p "Record as Available [y] / Not available [n] / Do not record [Enter]? " action
 
 status="INTERNAL-ERROR"
