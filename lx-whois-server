@@ -1,0 +1,7 @@
+
+# Source: https://superuser.com/a/822084/29940
+
+
+tld=$1
+whois -h whois.iana.org $tld |   egrep -e '^whois:' |   sed -e 's/[[:space:]][[:space:]]*/ /g' |   cut -d " " -f 2
+
