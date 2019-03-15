@@ -11,7 +11,7 @@ if [ "$domain" = "" ]
 fi
 
 whois ${*}
-read -p "Record as Available [y] / Not available [n] / Do not record [Enter]? " action
+read -p "Record as Available [y] / Not available [n] / Reserved [r] / Promotion [p] / Do not record [Enter]? " action
 
 status="INTERNAL-ERROR"
 if [ "$action" = "y"  ]
@@ -20,6 +20,10 @@ if [ "$action" = "y"  ]
 elif [ "$action" = "n" ]
   then
   status="TAKEN"
+elif [ "$action" = "r" ]; then
+  status="RESERVED"
+elif [ "$action" = "p" ]; then
+  status="PROMOTION"
 else
   echo "No record was written"
   exit
