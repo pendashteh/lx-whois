@@ -1,4 +1,9 @@
 # lx-whois
+
+## DISCONTINUED
+This project is __deprecated__ in favor of `whowas` project.
+Find more at https://github.com/pendashteh/whowas
+
 Record your whois queries
 
 ## Check availaibility
